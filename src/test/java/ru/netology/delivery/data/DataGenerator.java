@@ -21,9 +21,11 @@ public class DataGenerator {
     }
 
     public static String generateCity() {
-        String[] cities = new String[] {"Калининград", "Москва", "Санкт-Петербург", "Вологда", "Чебоксары", "Йошкар-Ола",
+        String[] cities = new String[] {
+            "Калининград", "Москва", "Санкт-Петербург", "Вологда", "Чебоксары", "Йошкар-Ола",
             "Казань", "Пермь", "Уфа", "Нижний Новгород", "Тюмень", "Омск", "Новосибирск", "Кемерово", "Барнаул",
-            "Томск", "Красноярск", "Иркутск", "Улан-Удэ", "Якутск", "Благовещенск", "Хабаровск", "Владивосток"};
+            "Томск", "Красноярск", "Иркутск", "Улан-Удэ", "Якутск", "Благовещенск", "Хабаровск", "Владивосток",
+        };
 
         return cities[new Random().nextInt(cities.length)];
     }
@@ -41,6 +43,7 @@ public class DataGenerator {
     public static class Registration {
         private Registration() {
         }
+
         public static UserInfo generateUser() {
             return new UserInfo(generateCity(), generateName(), generatePhone());
         }
